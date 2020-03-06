@@ -1,5 +1,10 @@
 {
   "name": "df_pro",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "fullcalendar": "^3.10.1",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0"
+  }
 }
