@@ -9,7 +9,14 @@
 
 <script>
  $('#calendar').fullCalendar ({
-   events: <%= raw @events.to_json%>,
+   events: '<%= events_path %>',
+
+   eventDrop: function( event, delta, revertFunc, jsEvent, ui, view ) {
+    console.log ("eventDrop");
+    console.log (event);
+   },
+
+
    businessHours: [ // Rangos de hora de atencion
      {
        dow: [ 1, 2, 3, 4 ], // Monday, Tuesday, Wednesday
@@ -36,15 +43,17 @@
 
    ],
 
+
    minTime: "08:00:00",
    maxTime: "17:00:00",
 
 hiddenDays: [ 0, 6, 7, ] ,// elimina dis de atencion , Wednesdays, and Fridays
 
 
- defaultView: 'agendaWeek'
 
-  })
+})
+
+
 
 </script>
 
