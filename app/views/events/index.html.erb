@@ -1,0 +1,93 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Events</h1>
+
+<div id='calendar'>
+</div>
+
+
+
+<script>
+ $('#calendar').fullCalendar ({
+   events: <%= raw @events.to_json%>,
+   businessHours: [ // Rangos de hora de atencion
+     {
+       dow: [ 1, 2, 3, 4 ], // Monday, Tuesday, Wednesday
+       start: '08:00', // 8am
+       end: '12:00' // 6pm
+     },
+     {
+       dow: [ 1, 2, 3, 4 ], // Monday, Tuesday, Wednesday
+       start: '13:00', // inicio colacion
+       end: '14:00' // termino colacion
+     },
+     {
+       dow: [ 1, 2, 3, 4 ], // Monday, Tuesday, Wednesday
+       start: '14:00', // 8am
+       end: '17:00' // 6pm
+     },
+
+     {
+       dow: [ 5 ], // Thursday, Friday
+       start: '08:00', // 10am
+       end: '12:00' // 4pm
+     },
+
+
+   ],
+
+   minTime: "08:00:00",
+   maxTime: "17:00:00",
+
+hiddenDays: [ 0, 6, 7, ] ,// elimina dis de atencion , Wednesdays, and Fridays
+
+
+ defaultView: 'agendaWeek'
+
+  })
+
+</script>
+
+<br>
+<br>
+<br>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Supplier name</th>
+      <th>Rut</th>
+      <th>Number invoice</th>
+      <th>Purcharse of order</th>
+      <th>Date</th>
+      <th>Chechk in</th>
+      <th>Quantity of code</th>
+      <th>Net price</th>
+      <th colspan="3"></th>
+      <br>
+      <br>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.supplier_name %></td>
+        <td><%= event.rut %></td>
+        <td><%= event.number_invoice %></td>
+        <td><%= event.purcharse_of_order %></td>
+        <td><%= event.date %></td>
+        <td><%= event.chechk_in %></td>
+        <td><%= event.quantity_of_code %></td>
+        <td><%= event.net_price %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_event_path %>

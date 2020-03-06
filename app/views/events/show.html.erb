@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Supplier name:</strong>
+  <%= @event.supplier_name %>
+</p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @event.rut %>
+</p>
+
+<p>
+  <strong>Number invoice:</strong>
+  <%= @event.number_invoice %>
+</p>
+
+<p>
+  <strong>Purcharse of order:</strong>
+  <%= @event.purcharse_of_order %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+
+<p>
+  <strong>Chechk in:</strong>
+  <%= @event.chechk_in %>
+</p>
+
+<p>
+  <strong>Quantity of code:</strong>
+  <%= @event.quantity_of_code %>
+</p>
+
+<p>
+  <strong>Net price:</strong>
+  <%= @event.net_price %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

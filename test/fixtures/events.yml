@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supplier_name: MyString
+  rut: MyString
+  number_invoice: 1
+  purcharse_of_order: 1
+  date: 2020-03-06
+  chechk_in: 2020-03-06 00:12:59
+  quantity_of_code: 1
+  net_price: 1
+
+two:
+  supplier_name: MyString
+  rut: MyString
+  number_invoice: 1
+  purcharse_of_order: 1
+  date: 2020-03-06
+  chechk_in: 2020-03-06 00:12:59
+  quantity_of_code: 1
+  net_price: 1
