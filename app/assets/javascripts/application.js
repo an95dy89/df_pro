@@ -17,5 +17,7 @@
 
 //= require jquery/dist/jquery
 //= require moment/moment
-//= require fullcalendar/dist/fullcalendar
 //= require_tree .
+
+ var fullcalendar = require('./fullcalendar')
+ window.fullcalendar = fullCalendar

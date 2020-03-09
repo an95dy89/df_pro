@@ -8,42 +8,5 @@
 
 
 
-<script>
- $("#calendar").fullCalendar({
 
-   events: <%= raw @events.to_json%>,
-
-   businessHours: [ // Rangos de hora de atencion
-     {
-       dow: [ 1, 2, 3, 4 ], // Monday, Tuesday, Wednesday
-       start: '08:00', // 8am
-       end: '12:00' // 6pm
-     },
-     {
-       dow: [ 1, 2, 3, 4 ], // Monday, Tuesday, Wednesday
-       start: '13:00', // inicio colacion
-       end: '14:00' // termino colacion
-     },
-     {
-       dow: [ 1, 2, 3, 4 ], // Monday, Tuesday, Wednesday
-       start: '14:00', // 8am
-       end: '17:00' // 6pm
-     },
-
-     {
-       dow: [ 5 ], // Thursday, Friday
-       start: '08:00', // 10am
-       end: '12:00' // 4pm
-     },
-
-   ],
-
-   minTime: "08:00:00",
-   maxTime: "17:00:00",
-
-hiddenDays: [ 0, 6, 7, ] ,// elimina dis de atencion , Wednesdays, and Fridays
-
-
-  })
-</script>
 <%= link_to 'New Event', new_event_path %>
