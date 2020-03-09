@@ -10,4 +10,9 @@
   strat_at = Random.rand(10).days.ago + 5.days
    Event.create!(supplier_name: Faker::Name.name, date:strat_at)
 end
-#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+
+10.times do |i|
+ User.create(email:"usuario#{i}@gmail.com", password:'123456')
+end

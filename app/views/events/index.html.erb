@@ -4,13 +4,14 @@
 <br>
 <br>
 
+
 <div id='calendar'>
 </div>
 
 <script>
- 
- $('#calendar').fullCalendar ({
-   events: '<%= events_path %>',
+
+ $('#calendar').fullCalendar({
+   events:'<%= events_path %>',
    eventDrop: function( event, delta, revertFunc, jsEvent, ui, view ) {
     console.log ("eventDrop");
     console.log (event.strat);

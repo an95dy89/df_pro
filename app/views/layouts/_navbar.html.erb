@@ -10,6 +10,11 @@
          <a class="nav-link" <%= link_to 'New Even', new_event_path %>
      </li></a>
 
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+          <a class="nav-link" <%= link_to 'Even', events_path %>
+      </li></a>
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <% if user_signed_in? %>
